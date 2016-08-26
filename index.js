@@ -76,6 +76,7 @@ function gm (source, height, color) {
 
     if (inputFromStdin && this.source && this.source !== 'unknown.jpg') {
         var ext = this.source.split('.').pop();
+        if (ext) ext = ext.toLowerCase();
         if (ext !== 'tga') ext = '';
         ret = ext + ':-';
     }
